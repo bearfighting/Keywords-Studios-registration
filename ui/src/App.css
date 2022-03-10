@@ -1,13 +1,62 @@
 .App {
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
 }
 
+.App-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+}
+
 .registration-form {
-  height: 500px;
-  width: 400px;
-  background-color: bisque;
+  margin: 10px 10px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  height: 300px;
+  width: 450px;
+  background-color: #07abf3;
+}
+
+.left-form {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.date-picker {
+  width: 130px;
+}
+
+.right-form {
+  margin: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  padding: 20px 5px;
+}
+
+.registred {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #07abf3;
+}
+
+.statistics {
+  background-color: #07abf3;
+  width: 760px;
+  margin: auto;
 }
