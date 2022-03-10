@@ -24,7 +24,7 @@ function App() {
         <Registred number={number} handleDisplay={handleDisplay} display={display}/>
       </div>
       <div className="App-bottom">
-          <Statistics display={display}/>
+        <Statistics display={display}/>
       </div>
     </div>
   );
