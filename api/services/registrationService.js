@@ -4,11 +4,15 @@ class RegistrationService {
     }
 
     async findAll() {
-        return "findAll is ok";
+        let result = await this._repo.findAll();
+
+        return result;
     }
 
     async create(registration) {
-        return "create is ok";
+        let result = await this._repo.create(registration);
+
+        return result;
     }
 }
 

@@ -13,12 +13,12 @@ class RegistrationController {
     }
 
     async createRegistration(req, res) {
-        const {registration} = res.body;
+        const registration = req.body;
         const result = await this._service.create(
             registration
         )
         if (result) {
-            res.sendStatus(201).send(result);
+            res.send(result);
         } else {
             res.sendStatus(404);
         }
