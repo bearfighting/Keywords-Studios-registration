@@ -4,6 +4,7 @@ import Registred from './Registred';
 import Statistics from './Statistics';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import {REGISTRATION_URL} from './url';
 
 function App() {
   const [number, setNumber] = useState(0);
@@ -12,7 +13,7 @@ function App() {
 
   useEffect(() => {
     async function init() {
-      let response = await axios.get('http://localhost:8080/api/registration');
+      let response = await axios.get(REGISTRATION_URL);
       setNumber(response.data.length);
       setRegistrations(response.data);
     }
@@ -25,7 +26,7 @@ function App() {
 
   const handleDisplay = async () => {
     setDisplay(!display);
-    let response = await axios.get('http://localhost:8080/api/registration');
+    let response = await axios.get(REGISTRATION_URL);
     setNumber(response.data.length);
     setRegistrations(response.data);
   }
