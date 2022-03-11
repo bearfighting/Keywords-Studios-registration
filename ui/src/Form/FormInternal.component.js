@@ -35,6 +35,13 @@ export default function FormInternal({handleSubmit}) {
       setTime(event.target.value);
     }
 
+    const clearInput = () => {
+      setName('');
+      setDate('');
+      setEmail('');
+      setTime('');
+    }
+
     return (
         <Form >
           <div className="registration-form">
@@ -69,7 +76,7 @@ export default function FormInternal({handleSubmit}) {
               </div>
             </div>
             <div className="right-form">
-              <Button variant="primary" style={{width: '150px', height: '50px', borderRadius: '15px'}} onClick={() => handleSubmit({name, email, date, time})}>
+              <Button variant="primary" style={{width: '150px', height: '50px', borderRadius: '15px'}} onClick={() => {handleSubmit({name, email, date, time}); clearInput();}}>
                   Submit
               </Button>
             </div>
