@@ -7,6 +7,22 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
+      database: 'registration',
+      user:     'user',
+      password: 'root'
+    },
+    pool: {
+      min: 2,
+      max: 2
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  },
+  production: {
+    client: 'mysql',
+    connection: {
+      host: 'db',
       database: 'db',
       user:     'user',
       password: 'root'

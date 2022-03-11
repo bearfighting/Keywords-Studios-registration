@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const knexConfig = require("../knexfile").development;
+const knexConfig = require("../knexfile").production;
 const knex = require('knex')(knexConfig);
 const {RegistrationRepo} = require("../repository");
 const {RegistrationService} = require("../services");

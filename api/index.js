@@ -15,5 +15,8 @@ app.use(bodyParser.json());
 app.use("/api/registration", routes.routerRegistration);
 
 app.listen("8080", () => {
+    if (process.env.NODE_ENV === 'production') {
+        console.log('production');
+    }
     console.log("running on http://localhost:8080");
 })
