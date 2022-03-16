@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const knexConfig = require("../knexfile").production;
+const knexConfig = process.env.NODE_ENV.trim() !== "production" ? require("../knexfile").development : require("../knexfile").development;
 const knex = require('knex')(knexConfig);
 const {RegistrationRepo} = require("../repository");
 const {RegistrationService} = require("../services");
